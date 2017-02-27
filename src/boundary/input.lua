@@ -159,7 +159,13 @@ function input.getLeftStick (player)
     if input.joystick and love.joystick.getJoystickCount () > 0 then
         return input.joystick:getGamepadAxis ("leftx"), input.joystick:getGamepadAxis ("lefty")
     end
+    return 0, 0
+end
 
+function input.getRightStick (player)
+    if input.joystick and love.joystick.getJoystickCount () > 0 then
+        return input.joystick:getGamepadAxis ("rightx"), input.joystick:getGamepadAxis ("righty")
+    end
     return 0, 0
 end
 
